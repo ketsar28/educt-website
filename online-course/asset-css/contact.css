@@ -1,0 +1,180 @@
+section.contact {
+  margin: 9rem 0 7rem;
+  padding: 2rem;
+}
+
+.contact-container {
+  background-color: var(--color-bg1);
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 3rem;
+  height: 28rem;
+  margin: 6rem auto;
+  border-radius: 1rem;
+  color: var(--color-white);
+}
+
+.contact-container aside {
+  background: radial-gradient(#af4cf6, #5b138f);
+  padding: 1.7rem 3rem;
+  border-radius: 10px;
+
+  position: relative;
+  bottom: 10rem;
+}
+
+aside .image img {
+  width: 14rem;
+  margin-bottom: 2rem;
+}
+
+.contact aside h2 {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.contact aside p {
+  font-weight: 550;
+  text-align: justify;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.contact aside ul li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.contact .social {
+  display: flex;
+  gap: 1.3rem;
+}
+
+.contact .social a {
+  display: flex;
+  color: #fff;
+  border-radius: 50%;
+  background-color: var(--color-bg1);
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.contact .social a:hover {
+  background-color: transparent;
+}
+
+/* form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin-right: 4rem;
+}
+
+form .name-input {
+  display: flex;
+  gap: 1.3rem;
+}
+
+form .name-input input[type="text"],
+form input[type="text"],
+form textarea {
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  font-weight: 550;
+  width: 100%;
+}
+
+form .name-input input[type="text"] {
+  width: 50%;
+  padding: 1rem;
+}
+
+form input[type="text"],
+form textarea {
+  padding: 1rem;
+}
+
+form textarea {
+  font-size: 1rem;
+}
+/* 
+form button {
+  border-radius: 0;
+  padding: 15px;
+  width: max-content;
+  margin-top: 1.1rem;
+} */
+form button {
+  padding: 0.8rem 1.5rem;
+  margin-top: 1.1rem;
+  width: max-content;
+  background: var(--color-primary);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+form button:focus {
+  box-shadow: #4d0382 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #4d0382 0 -3px 0 inset;
+}
+
+form button:hover {
+  background: #5c0a97;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.8) 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.show-btn:active {
+  box-shadow: #6e15ae 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/* ==responsive== */
+
+@media (max-width: 1024px) {
+  section.contact {
+    padding-bottom: 0;
+  }
+
+  .contact-container {
+    gap: 1.5rem;
+    margin-top: 3rem;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .contact-container aside {
+    width: auto;
+    padding: 1.5rem;
+    bottom: 0;
+  }
+
+  form {
+    align-self: center;
+    margin-right: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  form {
+    margin: 0 1.5rem 3rem;
+  }
+  form .name-input {
+    flex-direction: column;
+  }
+  form .name-input input[type="text"] {
+    width: 100%;
+  }
+}

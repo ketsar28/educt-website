@@ -1,0 +1,296 @@
+html,
+body {
+  overflow-x: hidden;
+}
+section.courses {
+  position: relative;
+  padding: 5rem;
+  margin: 3rem 0;
+}
+
+.top-content {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  gap: 2rem;
+  padding: 0 3rem;
+}
+
+.top-content .filter {
+  background: var(--color-primary);
+  padding: 1rem;
+  border-radius: 10px;
+  color: var(--color-white);
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.top-content .filter:hover {
+  background-color: #cecdcd;
+  color: #111;
+}
+
+.top-content .filter small {
+  font-size: 1.2rem;
+  font-weight: 550;
+}
+
+.top-content .filter small ion-icon {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 3%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+}
+
+/* search box */
+.top-content .search {
+  --background: #ffffff;
+  --text-color: #414856;
+  --primary-color: #4f29f0;
+  --border-radius: 10px;
+  --width: 400px;
+  --height: 55px;
+  background: var(--background);
+  width: auto;
+  height: var(--height);
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(65, 72, 86, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search input[type="text"] {
+  position: relative;
+  width: var(--height);
+  height: var(--height);
+  font: 400 16px "Varela Round", sans-serif;
+  color: var(--text-color);
+  border: 0;
+  box-sizing: border-box;
+  outline: none;
+  padding: 0 0 0 40px;
+  transition: width 0.6s ease;
+  z-index: 10;
+  opacity: 0;
+  cursor: pointer;
+}
+.search input[type="text"]:focus {
+  z-index: 0;
+  opacity: 1;
+  width: var(--width);
+}
+.search input[type="text"]:focus ~ .symbol::before {
+  width: 0%;
+}
+.search input[type="text"]:focus ~ .symbol:after {
+  -webkit-clip-path: inset(0% 0% 0% 100%);
+  clip-path: inset(0% 0% 0% 100%);
+  transition: -webkit-clip-path 0.04s linear 0.105s;
+  transition: clip-path 0.04s linear 0.105s;
+  transition: clip-path 0.04s linear 0.105s, -webkit-clip-path 0.04s linear 0.105s;
+}
+.search input[type="text"]:focus ~ .symbol .cloud {
+  top: -30px;
+  left: -30px;
+  transform: translate(0, 0);
+  transition: all 0.6s ease;
+}
+.search input[type="text"]:focus ~ .symbol .lens {
+  top: 20px;
+  left: 15px;
+  transform: translate(0, 0);
+  fill: var(--primary-color);
+  transition: top 0.5s ease 0.1s, left 0.5s ease 0.1s, fill 0.3s ease;
+}
+.search .symbol {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search .symbol:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color);
+  z-index: -1;
+  transition: width 0.6s ease;
+}
+.search .symbol:after {
+  content: "";
+  position: absolute;
+  top: 21px;
+  left: 21px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  z-index: 1;
+  -webkit-clip-path: inset(0% 0% 0% 0%);
+  clip-path: inset(0% 0% 0% 0%);
+  transition: -webkit-clip-path 0.04s linear 0.225s;
+  transition: clip-path 0.04s linear 0.225s;
+  transition: clip-path 0.04s linear 0.225s, -webkit-clip-path 0.04s linear 0.225s;
+}
+.search .symbol .cloud,
+.search .symbol .lens {
+  position: absolute;
+  fill: #fff;
+  stroke: none;
+  top: 50%;
+  left: 50%;
+}
+.search .symbol .cloud {
+  width: 35px;
+  height: 32px;
+  transform: translate(-50%, -60%);
+  transition: all 0.6s ease;
+}
+.search .symbol .lens {
+  fill: #fff;
+  width: 16px;
+  height: 16px;
+  z-index: 2;
+  top: 24px;
+  left: 24px;
+  transition: top 0.3s ease, left 0.3s ease, fill 0.2s ease 0.2s;
+}
+
+.wrapper {
+  font: 400 16px "Varela Round", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-right: 5%;
+  transition: all 1.5s linear;
+}
+
+/* .wrapper.active {
+  margin-right: 10px;
+} */
+
+.wrapper .socials {
+  position: fixed;
+  display: block;
+  left: 20px;
+  bottom: 20px;
+}
+.wrapper .socials > a {
+  display: block;
+  width: 30px;
+  opacity: var(--opacity, 0.2);
+  transform: scale(var(--scale, 0.8));
+  transition: transform 0.3s cubic-bezier(0.38, -0.12, 0.24, 1.91);
+}
+.wrapper .socials > a:hover {
+  --scale: 1;
+}
+
+/* bottom - content */
+.bottom-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 3rem;
+  gap: 2rem;
+}
+
+.bottom-content .card-wrapper {
+  background: #e4e2e2;
+  border-radius: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: none;
+  box-shadow: rgba(0, 0, 0, 0.55) 0px 14px 28px, rgba(0, 0, 0, 0.52) 0px 10px 10px;
+}
+
+.bottom-content .card-wrapper:nth-child(1),
+.bottom-content .card-wrapper:nth-child(2),
+.bottom-content .card-wrapper:nth-child(3) {
+  display: block;
+}
+
+.bottom-content .card-wrapper .img_article {
+  width: 400px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.bottom-content .card-wrapper img {
+  transition: all 0.3s;
+  max-width: 100%;
+}
+
+.bottom-content .card-wrapper:hover img {
+  transform: scale(1.2);
+}
+
+.bottom-content .card-wrapper .info h1,
+.bottom-content .card-wrapper .info small {
+  margin: 0.8rem;
+}
+
+.bottom-content .card-wrapper .info {
+  padding: 1rem;
+}
+
+.bottom-content .card-wrapper p {
+  color: #333;
+  margin: 1.1rem 0.8rem 1.3rem;
+}
+.bottom-content .card-wrapper .info p > small {
+  font-weight: 550;
+  margin-left: 0;
+}
+
+.bottom-content .card-wrapper .info p > span {
+  background: var(--color-bg2);
+  padding: 0.3rem;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.bottom-content .card-wrapper .info small {
+  font-weight: 600;
+  color: #222;
+  font-size: 1rem;
+}
+
+/* btn show more */
+.show-more {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.show-btn {
+  padding: 0.8rem 1.5rem;
+  background: var(--color-primary);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.show-btn:focus {
+  box-shadow: #4d0382 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #4d0382 0 -3px 0 inset;
+}
+
+.show-btn:hover {
+  background: #5c0a97;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.8) 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.show-btn:active {
+  box-shadow: #6e15ae 0 3px 7px inset;
+  transform: translateY(2px);
+}

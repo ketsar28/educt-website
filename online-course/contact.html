@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>On-Course</title>
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- my css -->
+    <link rel="stylesheet" href="asset-css/style.css" />
+    <link rel="stylesheet" href="asset-css/contact.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <div class="logo"><h1>Ketsar</h1></div>
+        <ul class="list-menu">
+          <li class="list-items"><a href="index.html">Home</a></li>
+          <li class="list-items"><a href="#category">Category</a></li>
+          <li class="list-items"><a href="about.html">About</a></li>
+          <li class="list-items"><a href="courses.html">Courses</a></li>
+          <li class="list-items"><a href="#testimonial">Testimonials</a></li>
+          <li class="list-items active"><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="btn1" id="btn">Sign in</button>
+        <div class="side-menu">
+          <ion-icon name="grid-outline" class="toggle-menu"></ion-icon>
+          <ion-icon name="close-circle-outline" class="toggle-close"></ion-icon>
+        </div>
+      </nav>
+    </header>
+
+    <!--=== contact us ===-->
+    <section class="contact" id="contact">
+      <div class="contact-container">
+        <aside>
+          <div class="image">
+            <img src="img/contactus.png" alt="" />
+          </div>
+          <h2>Contact Us</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis esse, eligendi, dolore incidunt sint sit quo assumenda ipsum commodi ratione, officiis dolorum! Itaque, pariatur sunt sint accusantium voluptates atque</p>
+          <ul>
+            <li>
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+              <h4>+6285155343380</h4>
+            </li>
+            <li>
+              <ion-icon name="mail-outline"></ion-icon>
+              <h4>muhammadketsar1@gmail.com</h4>
+            </li>
+            <li>
+              <ion-icon name="location-outline"></ion-icon>
+              <h4>Bogor, Jawa Barat</h4>
+            </li>
+          </ul>
+
+          <ul class="social">
+            <li>
+              <a href=""><ion-icon name="logo-youtube"></ion-icon></a>
+            </li>
+            <li>
+              <a href=""><ion-icon name="logo-whatsapp"></ion-icon></a>
+            </li>
+            <li>
+              <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+            </li>
+            <li>
+              <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+            </li>
+          </ul>
+        </aside>
+
+        <form action="https://formspree.io/f/xqknykvb" method="POST">
+          <div class="name-input">
+            <input type="text" placeholder="Nama Depan" required />
+            <input type="text" placeholder="Nama Belakang" required />
+          </div>
+
+          <input type="text" placeholder="Masukan Email" required />
+          <textarea name="Message" id="textarea" placeholder="Masukan Pesan" rows="10" required></textarea>
+          <button class="btn" id="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- === footer === -->
+    <footer class="footer" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="70">
+      <div class="container-footer">
+        <div class="satu">
+          <h2>My Website</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, mollitia ducimus hic repellat aperiam dolorem, veritatis necessitatibus aspernatur molestiae odit vero eos placeat dignissi.</p>
+        </div>
+
+        <div class="dua">
+          <h2>Permalinks</h2>
+          <li>
+            <a href="">Home</a>
+          </li>
+          <li>
+            <a href="">Category</a>
+          </li>
+          <li>
+            <a href="">About</a>
+          </li>
+          <li>
+            <a href="">Achivement</a>
+          </li>
+        </div>
+
+        <div class="tiga">
+          <h2>Primacy</h2>
+          <li><a href="">Privacy Policy</a></li>
+          <li><a href="">Terms and Conditions</a></li>
+          <li><a href="">Refund Policy</a></li>
+        </div>
+
+        <div class="empat">
+          <h2>Contact Us</h2>
+          <p>0851-5534-3380</p>
+          <p>muhammadketsar1@gmail.com</p>
+
+          <ul class="social-media">
+            <li>
+              <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+            </li>
+            <li>
+              <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+            </li>
+            <li>
+              <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+            </li>
+            <li>
+              <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <h4>&copy; Copyright | Ketsar Ali</h4>
+      </div>
+    </footer>
+
+    <!-- swiper js -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- icons js -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- aos js -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1600,
+        offset: 100,
+      });
+    </script>
+
+    <script>
+      const getNav = document.querySelector(".header");
+
+      window.addEventListener("scroll", () => {
+        getNav.classList.toggle("active", window.scrollY > 20);
+      });
+
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        grabCursor: true,
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+      });
+
+      // navbar
+
+      const getMenu = document.querySelector(".side-menu .toggle-menu");
+      const getClose = document.querySelector(".side-menu .toggle-close");
+      const getNavItems = document.querySelector("header nav ul");
+
+      getMenu.addEventListener("click", () => {
+        getNavItems.classList.toggle("active");
+        getMenu.classList.toggle("none");
+        // getClose.classList.toggle("active");
+      });
+
+      window.addEventListener("scroll", () => {
+        getNavItems.classList.remove("active", window.scrollY);
+      });
+
+      // category
+      const category = document.querySelectorAll("article.category");
+      category.forEach((card, i) => {
+        card.dataset.aosDelay = i * 250;
+        card.dataset.duration = 2000;
+      });
+    </script>
+  </body>
+</html>
